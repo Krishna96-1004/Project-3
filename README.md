@@ -6,7 +6,7 @@ The objective of this project is to create a compelling data visualization that 
 * Visit [World Happiness](https://github.com/Krishna96-1004/Project-3/tree/main) Project.
 
 ### Tools
-HTML with CSS, Python with pandas and Matplotlib
+HTML with CSS, Flask, JavaScript, Python with pandas and Matplotlib
 
 
 ### Data Source
