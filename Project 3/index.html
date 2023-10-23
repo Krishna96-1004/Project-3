@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+
+<html >
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="An interactive visual exploration of the state of global 
+happiness including six factors – economic production, social support, life expectancy, freedom, 
+absence of corruption, and generosity  – that strongly contribute to making life evaluations higher.">
+<meta name="keywords" content="happy, world happiness, data, data science, data visualization, 
+economic production, social support, life expectancy, freedom, absence of corruption, generosity ">
+
+
+
+<title>World Happiness</title> 
+
+<link rel="shortcut icon" href="imgs/happy.ico" type="image/ico">
+
+
+
+
+<link rel="stylesheet" href="css/style.css">
+<link href="https://fonts.googleapis.com/css?family=Spectral" rel="stylesheet"> 
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/topojson/1.6.19/topojson.min.js'></script>
+<script src='https://www.workshape.io/js/geo/d3.geo.zoom.js'></script>
+
+
+</head>
+<body>
+
+	<script src="js/index.js"></script>
+
+<div class="wrapper">
+
+<div ng-app="myapp">
+    <div ng-controller="ctrl1">
+    	<scoped data="data">
+    	</scoped>
+    </div>
+</div>
+
+
+<script src='happyController.js'></script>
+
+
+
+<div class="bottomRow">
+
+	
+	</div>
+
+
+	<hr />
+	<br>
+	<h2>Overview</h2>
+	<p>
+	This analysis shows the happiness of countries in the world using Gallup World Poll data from 2017. We are going to be looking at six different factors that play a role in world 
+	happiness amount 155 different countries and of those countries, which ones ranked the highest and lowest in happiness score. The interactive display provided below offers a glimpse into the scores of all countries 
+	across various time periods, based on our collected data. This allows you to observe the ranking of each country at specific moments in time.
+	</p>
+	
+	<hr />
+
+	<br>
+	<h2>Context</h2>
+	<p>
+		The World Happiness Report, a survey that gauges global happiness, first made its appearance in 2012, followed by editions in 2013, 2015, and an update in 2016. 
+		The 2017 report, which ranks the happiness levels of 155 countries, was unveiled at a United Nations event on March 20th, commemorating the International Day of Happiness. 
+		As the report garners worldwide attention, it’s increasingly being used by governments, organizations, and civil society to guide policy-making decisions using happiness metrics. 
+		Experts from diverse fields - including economics, psychology, survey analysis, national statistics, health, public policy and more - elucidate how well-being measurements can 
+		effectively gauge a nation’s progress. The reports provide an overview of the current global happiness status and delve into the emerging science of happiness to explain the variations 
+		in happiness at both personal and national levels.
+
+		<p>
+			The happiness scores and rankings are derived from data collected by the Gallup World Poll. These scores are based on responses to a key life evaluation question in the poll, known as 
+			the Cantril ladder. This question prompts respondents to envision a ladder where 10 represents the best possible life for them and 0 signifies the worst, and to rate their current lives
+			 on this scale.
+	
+			The scores are drawn from nationally representative samples spanning the years 2013-2016, with Gallup weights applied to ensure representativeness. Subsequent columns following the 
+			happiness score estimate how much each of six factors - economic production, social support, life expectancy, freedom, absence of corruption, and generosity - contribute to elevating 
+			life evaluations in each country above those in Dystopia. Dystopia is a hypothetical country characterized by values equal to the world’s lowest national averages for each of these six 
+			factors.
+			
+			While these factors don’t influence the total score reported for each country, they do help explain why some countries rank higher than others.
+		</p>
+	
+	<h2>Data</h2>
+	<p>Link to Kaggle website data used - <a href="https://www.kaggle.com/unsdsn/world-happiness">KAGGLE</a></p>
+
+	<p>Links to all csv data - <a href="https://github.com/Krishna96-1004/Project-3"> Project 3  </a>
+
+	</p>
+	
+	<h2>Ojective</h2>
+
+	<ul>
+		<li>What are the six factors that contribute to World Happiness overall? </li>
+		<li>What country ranked the highest in overall happiness?</li>
+		<li>How did that country's rank or score change between the years? Was there any specific events that sparked a change? </li>
+		<li>Did any country experience a significant increase or decrease in happiness?</li>
+
+		
+	</ul>
+	<br>
+
+		<br>
+
+	<h2>Analysis</h2>
+	<br>
+	<p>
+		The six measured factors that we will look at in this analysis are Family, Economy, Health/Life Expectancy, Freedom, Generosity, and Trust in Government. According to our data Norway
+		is the happiest country in 2017, however, they were not always in the first place rank for World Happiness. Norway jumped from 4th place in 2016 to 1st place in 2017, and while the
+		data we collected alone doesn’t provide a definitive explanation for this leap, we can infer potential reasons by considering various socio-economic context of that period. Looking at 
+		global events that transpired between 2015 and 2017 can shed light on shifts in happiness scores. During 2016 and 2017, a series of events and changes in Norway potentially contributed 
+		to its rise in happiness rankings. In this period, Norway enjoyed political stability under the leadership of Prime Minister 
+		Erna Solberg. The country’s economic strength was boosted by its oil and gas industry. The partial disestablishment and demotion of the Church of Norway could be seen as progress in 
+		religious freedom. Norway also experienced technological advancements and digitalization. Furthermore, numerous cultural events, such as music festivals, tourism, and internationally 
+		hosted events, took place, possibly enhancing the nation's morale. These events likely influenced the happiness score for Norway, among other facotrs that have not been analyzed in these 
+		data sets. The ratings for countries during this time period can also be influenced by various factors that differ from the ones disscussed for Norway including but not limited to economic 
+		indicators like GDP and unemployment rates, social elements such as familial and communal support, and the state of political stability or turmoil, etc.,
+		so in order to quantify their exact impact, a thorough 
+		understanding of each country’s unique
+		circumstances during those years will provide more insight on their ranking and why it has changed through out the years.
+	</p>
+
+	<h2>Conclusion</h2>
+	<p>
+		Based on the 2017 data, Norway was ranked as the happiest country, closely followed by Iceland. Conversely, the Central African Republic was identified as the least happy country, 
+		with Burundi just above it. When considering the average happiness levels from all the data taken from 2015 to 2017, it shows that Denmark ranked  as the happiest country and Togo 
+		as the least happy. You can use the interactive	view below to see what the rankings were of each other these countries during different the different years.
+	</p>
+	<br>
+	
+
+	<!-- <br>
+	<h2>Machine Learning</h2>
+	<p>DESCRIBE PROCESS HERE</p>
+	<br>
+	<div class="row">
+		<div class="column">
+		  <img src="img_snow.jpg" alt="jpg1" style="width:100%">
+		  <p>DESCRIBE CHART HERE
+		  	</p>
+		</div>
+		<div class="column">
+		  <img src="img_forest.jpg" alt="jpg2" style="width:100%">
+		  <p>DESCRIBE CHART HERE
+			</p>
+		</div>
+		<div class="column">
+		  <img src="img_mountains.jpg" alt="jpg3" style="width:100%">
+		  <p>DESCRIBE CHART HERE
+			</p>
+		</div>
+	  </div>
+	
+ -->
+
+
+	<br>	
+	<h2>Power BI Dashboard</h2>
+	<br>
+	<br>
+	<div class="row">
+		<div class="column">
+			<iframe width="800" height="600" src="https://app.powerbi.com/view?r=eyJrIjoiMzI0NWU5MmUtYTFhNS00ZjQwLWE1ZTEtNDNlODEyN2E2OWNjIiwidCI6IjQwOTQzMjY3LTM3ZTYtNDYyYy1hOTJlLWZhODcxM2MzNDlkZCIsImMiOjF9" frameborder="0" allowFullScreen="true"></iframe>
+		</div>
+
+
+	  </div>
+	<br>
+
+
+
+
+	<hr />
+<div style="text-align:center;">
+	<div id="share-buttons">
+	<div id="l1"><a href="https://github.com/Krishna96-1004/Project-3.git"><img src="imgs/github.png" alt="github"></a></div>
+	</div>
+</div>
+
+<footer class="footer">
+		<p class="text text-center">
+			<small>| Rutgers Data Analytics Bootcamp - Project 3 |</small>
+		</p>
+		</div>
+	  </footer>
+
+<br>
+
+<br>
+
+
+
+
+</div>
+</body>
+</html>
